@@ -1,4 +1,4 @@
 # MFT_UI
 #Start Instruction: 
-npm init
-npm start
+#npm init
+#npm start
