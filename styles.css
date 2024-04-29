@@ -48,6 +48,33 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+table {
+    padding: 20px;  
+}
+
+table th {
+    border-bottom: 2px solid #fcfcfc; 
+    padding-bottom: 5px;   
+}
+
+table th, table td {
+    text-align: center;
+}
+
+table tr {
+    border-bottom: 3px solid #fcfcfc;
+}
+
 .container {
     display: flex;
     flex-direction: column;

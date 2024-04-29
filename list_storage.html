@@ -1,48 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Storage</title>
+    <title>List from JSON</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>MFT Browser</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="list_storage.html">List Storage</a></li>
-                <li><a href="add_storage.html">Add Storage</a></li>
-            </ul>
-        </nav>
+        <h1>List of Storages</h1>
+        <a href = "index.html">Back to Home Page</a>
     </header>
-    <div class="container">
-        <h1>List Storage Options:</h1>
-        <ul class="storage-list">
-            <li>
-                <span>S3</span>
-                <button class="delete-btn">Delete</button>
-                <button class="open-btn">Open</button> <!-- Added "Open" button -->
-            </li>
-            <li>
-                <span>Google Cloud Storage (GCS)</span>
-                <button class="delete-btn">Delete</button>
-                <button class="open-btn">Open</button> <!-- Added "Open" button -->
-            </li>
-            <li>
-                <span>Azure Storage</span>
-                <button class="delete-btn">Delete</button>
-                <button class="open-btn">Open</button> <!-- Added "Open" button -->
-            </li>
-            <li>
-                <span>Openstack SWIFT</span>
-                <button class="delete-btn">Delete</button>
-                <button class="open-btn">Open</button> <!-- Added "Open" button -->
-            </li>
-            <!-- Add more list items here -->
-        </ul>
-        <a href="add_storage.html" class="add-btn">Add Storage</a>
-    </div>
+    <table id="itemTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>ID</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="itemList">
+        </tbody>
+    </table>
+
+    <script src="viewlist.js"></script>
 </body>
 </html>
