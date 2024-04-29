@@ -1,7 +1,7 @@
 {
-  "name": "my-electron-app",
+  "name": "test",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is the UI component of the project. The backend can be found [here](https://github.com/anish-kristipati/mft-ui-backend.git)",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,5 +11,13 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^30.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayushi308/MFT_UI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ayushi308/MFT_UI/issues"
+  },
+  "homepage": "https://github.com/Ayushi308/MFT_UI#readme"
 }
