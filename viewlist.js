@@ -23,22 +23,22 @@ async function getStorages() {
   getStorages()
     .then(data => {
       const itemList = document.getElementById('itemList');
-  
+      const storageList = data.storageList;
+      console.log('Storage list:', storageList);
       // Loop through the data and create list elements
       //FIXME: Data is passed through fine in a json, but this foreach loop is not working
       //Printed in the console.log (ctrl-shift-I) to see the json object and error
-      data.forEach(item => {
+      storageList.forEach(item => {
         const listItem = document.createElement('li');
-  
         // Create elements for name, type, ID, and actions
         const nameElement = document.createElement('span');
-        nameElement.textContent = `Name: ${item.name}`;
+        nameElement.textContent = `Name: ${item.storageName}`;
   
         const typeElement = document.createElement('span');
-        typeElement.textContent = ` Type: ${item.type}`;
+        typeElement.textContent = ` Type: ${item.storageType}`;
   
         const idElement = document.createElement('span');
-        idElement.textContent = ` ID: ${item.id}`;
+        idElement.textContent = ` ID: ${item.storageId}`;
   
         const actionsElement = document.createElement('div');
   
