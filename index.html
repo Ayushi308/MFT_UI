@@ -9,29 +9,41 @@
 <body>
     <header>
         <h1>MFT Browser</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="list_storage.html">List Storage</a></li>
-                <li><a href="add_storage.html">Add Storage</a></li>
-            </ul>
-        </nav>
     </header>
-    <div class="container">
-        <h2>Add Storage:</h2>
-        <div class="buttons">
-            <button>S3</button>
-            <button>Google Cloud Storage (GCS)</button>
-            <button>Azure Storage</button>
-            <button>Openstack SWIFT</button>
-            <button>SCP</button>
-            <button>FTP</button>
-            <button>Box</button>
-            <button>DropBox</button>
-            <button>OData</button>
-            <button>Agent</button>
-            <button>HTTP</button>
-        </div>
+    <div class="centered-button">
+        <a href="list_storage.html" class="button">Start Client</a>
     </div>
+
+    <style>
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .centered-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 60vh;
+          margin: 0;
+        }
+      
+        .button {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #9c9d9c;
+          color: white;
+          text-decoration: none;
+          font-size: 16px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      
+        .button:hover {
+          background-color: rgb(172, 172, 172);
+        }
+      </style>
+
 </body>
 </html>
