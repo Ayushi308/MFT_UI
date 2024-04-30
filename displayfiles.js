@@ -53,15 +53,19 @@ function buildTable(files) {
         console.log(file.resourceSize);
         row.insertCell().textContent = file.resourcePath;
         console.log(file.resourcePath);
-        row.insertCell().textContent = new Date((file.updateTime * 1000)).toString();
         console.log(file.updateTime);
+        console.log(parseInt(file.updateTime, 10));
+        console.log(typeof file.updateTime);
+        console.log(file.updateTime);
+        if (parseInt(file.updateTime) < 99999999999){
+            var newnew = new Date(parseInt(file.updateTime)*1000);
+            row.insertCell().textContent = new Date(newnew).toString();
+        } else {
+            var newnew = new Date(parseInt(file.updateTime));
+            row.insertCell().textContent = new Date(newnew).toString();
+        }
+        
     });
-    
-//     1714431919000
-// displayfiles.js:74 1714335357
-
-    //1706735398147000
-    //1706735398147
     
 
     dirStore = files.directory.directories;
@@ -72,11 +76,20 @@ function buildTable(files) {
         row.insertCell().textContent = 'DIR';
         row.insertCell().textContent = 'N/A';
         row.insertCell().textContent = file1.resourcePath;
-        const time = file1.createdTime;
+        const time = file1.updateTime;
         console.log(time);
-        row.insertCell().textContent = new Date((time)).toString();
-        console.log(file1.updateTime);
+        var timely = file1.updateTime;
+        console.log(timely);
+        if (parseInt(time) < 9999999999){
+            var newnew = new Date(parseInt(timely)*1000);
+        } else {
+            var newnew = new Date(parseInt(timely));
+        }
+        
+        row.insertCell().textContent = newnew;
+        console.log(newnew);
     });
+
 
     fileListDiv.appendChild(table);
 }
