@@ -19,29 +19,9 @@
     </header>
     <div class="container">
         <h1>List Storage Options:</h1>
-        <ul class="storage-list">
-            <li>
-                <span>S3</span>
-                <button class="delete-btn">Delete</button>
-                <button class="open-btn">Open</button> <!-- Added "Open" button -->
-            </li>
-            <li>
-                <span>Google Cloud Storage (GCS)</span>
-                <button class="delete-btn">Delete</button>
-                <button class="open-btn">Open</button> <!-- Added "Open" button -->
-            </li>
-            <li>
-                <span>Azure Storage</span>
-                <button class="delete-btn">Delete</button>
-                <button class="open-btn">Open</button> <!-- Added "Open" button -->
-            </li>
-            <li>
-                <span>Openstack SWIFT</span>
-                <button class="delete-btn">Delete</button>
-                <button class="open-btn">Open</button> <!-- Added "Open" button -->
-            </li>
-            <!-- Add more list items here -->
-        </ul>
+        <ul id="itemList"></ul>
+
+        <script src="viewlist.js"></script>
         <a href="add_storage.html" class="add-btn">Add Storage</a>
     </div>
 </body>
