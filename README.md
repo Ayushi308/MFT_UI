@@ -8,7 +8,6 @@ This is the UI component of the project. Make sure the backend is running. The b
     - npm start
 
 ## Video Demo
-[MFT Installation Process](https://www.youtube.com/watch?v=1WSCiPQAG1Q)
 [MFT Demo](https://www.youtube.com/watch?v=jITgCBI1UrM&feature=youtu.be)
 
 ## Screenshots
