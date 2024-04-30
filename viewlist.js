@@ -29,48 +29,54 @@ async function getStorages() {
       //FIXME: Data is passed through fine in a json, but this foreach loop is not working
       //Printed in the console.log (ctrl-shift-I) to see the json object and error
       storageList.forEach(item => {
-        const row = document.createElement('tr');
+        const listItem = document.createElement('li');
         // Create elements for name, type, ID, and actions
-        const nameCell = document.createElement('td');
-        nameCell.textContent = item.storageName;
-        row.appendChild(nameCell);
+        const nameElement = document.createElement('span');
+        nameElement.textContent = `Name: ${item.storageName}`;
   
-        const typeCell = document.createElement('td');
-        typeCell.textContent = item.storageType;
-        row.appendChild(typeCell);
+        const typeElement = document.createElement('span');
+        typeElement.textContent = ` Type: ${item.storageType}`;
   
-        const idCell = document.createElement('td');
-        idCell.textContent = item.storageId;
-        row.appendChild(idCell);
+        const idElement = document.createElement('span');
+        idElement.textContent = ` ID: ${item.storageId}`;
   
-        const actionsCell = document.createElement('td');
+        const actionsElement = document.createElement('div');
   
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
         deleteButton.addEventListener('click', () => {
           // Handle delete action
-          console.log(`Deleting item with ID: ${item.storageId}`);
+          console.log(`Deleting item with ID: ${item.id}`);
         });
   
         const openButton = document.createElement('button');
         openButton.textContent = 'Open';
         openButton.addEventListener('click', () => {
           // Handle open action
-          console.log(`Opening item with ID: ${item.storageId}`);
+          // Handle open action
+        const queryParams = new URLSearchParams({
+          storageId: item.storageId,
+          storageName: item.storageName,
+          storageType: item.storageType,
+          path: '/' // shows all files in root directory
+        });
+        const url = `list_files.html?${queryParams.toString()}`;
+        console.log(url);
+       window.location.href = url;
+        console.log(`Opening item with ID: ${item.storageId}`);
         });
   
-        actionsCell.appendChild(deleteButton);
-        actionsCell.appendChild(openButton);
-        row.appendChild(actionsCell);
+        actionsElement.appendChild(deleteButton);
+        actionsElement.appendChild(openButton);
   
         // Append all elements to the list item
-        //listItem.appendChild(nameElement);
-        //listItem.appendChild(typeElement);
-        //listItem.appendChild(idElement);
-        //listItem.appendChild(actionsElement);
+        listItem.appendChild(nameElement);
+        listItem.appendChild(typeElement);
+        listItem.appendChild(idElement);
+        listItem.appendChild(actionsElement);
   
         // Append the list item to the unordered list
-        itemList.appendChild(row);
+        itemList.appendChild(listItem);
       });
     })
     .catch(error => console.error('Error fetching data:', error));

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List from JSON</title>
+    <!-- Link to the external CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>List of Items</h1>
+    <!-- Use a table instead of a list -->
+    <table id="fileList"></table>
+
+    <!-- Add a back button -->
+    <button onclick="goBack()">Back</button>
+
+    <script src="displayfiles.js"></script>
+    <script>
+        // Function to navigate back
+        function goBack() {
+            window.location.href = "list_storage.html"; // Redirect to the desired page
+        }
+    </script>
+</body>
+</html>
