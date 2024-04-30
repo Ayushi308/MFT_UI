@@ -12,6 +12,15 @@
     <!-- Use a table instead of a list -->
     <table id="fileList"></table>
 
+    <!-- Add a back button -->
+    <button onclick="goBack()">Back</button>
+
     <script src="displayfiles.js"></script>
+    <script>
+        // Function to navigate back
+        function goBack() {
+            window.location.href = "list_storage.html"; // Redirect to the desired page
+        }
+    </script>
 </body>
 </html>
