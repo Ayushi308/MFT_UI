@@ -11,6 +11,7 @@ This is the UI component of the project. Make sure the backend is running. The b
 [MFT Demo](https://www.youtube.com/watch?v=jITgCBI1UrM&feature=youtu.be)
 
 ## Screenshots
-![Home Page](MFT_UI/Images/Home.png)
-![Add Storages](MFT_UI/Images/AddStorages.png)
-![List Storages](MFT_UI/Images/Storages.png)
+![Home Page](Images/Home.png)
+![Add Storages](Images/AddStorages.png)
+![List Storages](Images/Storages.png)
+![List of Files](Images/Files.png)
